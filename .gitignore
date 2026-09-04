@@ -1,0 +1,9 @@
+.DS_Store
+Thumbs.db
+*.log
+
+# Internal / private docs — not for the public website
+guest-guide.html
+launch-checklist.html
+video-script.html
+data/
