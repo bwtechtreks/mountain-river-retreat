@@ -11,25 +11,27 @@
     <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;600;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
 </head>
 <body>
+    <a href="#main" class="skip-link">Skip to main content</a>
     <!-- Navigation -->
-    <nav class="navbar scrolled" id="navbar">
+    <nav class="navbar scrolled" id="navbar" aria-label="Main navigation">
         <div class="nav-container">
             <a href="index.html" class="nav-logo">Mountain River Retreat</a>
-            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
-                <span></span>
-                <span></span>
-                <span></span>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
             </button>
             <ul class="nav-menu" id="nav-menu">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="photos.html">Photos</a></li>
                 <li><a href="activities.html">Activities</a></li>
-                <li><a href="more.html" class="active">More</a></li>
+                <li><a href="more.html" class="active" aria-current="page">More</a></li>
                 <li><a href="book.html" class="nav-cta">Book Now</a></li>
             </ul>
         </div>
     </nav>
 
+    <main id="main">
     <!-- Page Header -->
     <header class="page-header">
         <div class="container">
@@ -45,7 +47,7 @@
             <div class="timeline">
 
                 <div class="timeline-item timeline-done">
-                    <div class="timeline-marker">✓</div>
+                    <div class="timeline-marker" aria-hidden="true">✓</div>
                     <div class="timeline-content">
                         <div class="timeline-phase">Completed</div>
                         <ul class="timeline-list">
@@ -56,7 +58,7 @@
                 </div>
 
                 <div class="timeline-item">
-                    <div class="timeline-marker">🍂</div>
+                    <div class="timeline-marker" aria-hidden="true">🍂</div>
                     <div class="timeline-content">
                         <div class="timeline-phase">Fall 2026</div>
                         <ul class="timeline-list">
@@ -67,7 +69,7 @@
                 </div>
 
                 <div class="timeline-item">
-                    <div class="timeline-marker">🌿</div>
+                    <div class="timeline-marker" aria-hidden="true">🌿</div>
                     <div class="timeline-content">
                         <div class="timeline-phase">Spring / Summer 2027</div>
                         <ul class="timeline-list">
@@ -78,7 +80,7 @@
                 </div>
 
                 <div class="timeline-item">
-                    <div class="timeline-marker">✨</div>
+                    <div class="timeline-marker" aria-hidden="true">✨</div>
                     <div class="timeline-content">
                         <div class="timeline-phase">2027 &amp; Beyond</div>
                         <ul class="timeline-list">
@@ -116,14 +118,15 @@
                     </div>
                     <button type="submit" class="btn btn-primary btn-submit">Send Suggestion</button>
                 </form>
-                <div id="suggestion-success" class="form-success hidden">
-                    <div class="success-icon">💡</div>
+                <div id="suggestion-success" class="form-success hidden" role="status" aria-live="polite">
+                    <div class="success-icon" aria-hidden="true">💡</div>
                     <h3>Thanks for the idea!</h3>
                     <p>We read every suggestion and seriously consider all of them. You're helping us make this place better.</p>
                 </div>
             </div>
         </div>
     </section>
+    </main>
 
     <!-- Footer -->
     <footer class="footer">

@@ -11,26 +11,28 @@
     <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;600;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
 </head>
 <body>
+    <a href="#main" class="skip-link">Skip to main content</a>
     <!-- Navigation -->
-    <nav class="navbar scrolled" id="navbar">
+    <nav class="navbar scrolled" id="navbar" aria-label="Main navigation">
         <div class="nav-container">
             <a href="index.html" class="nav-logo">Mountain River Retreat</a>
-            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
-                <span></span>
-                <span></span>
-                <span></span>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
             </button>
             <ul class="nav-menu" id="nav-menu">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="index.html#retreat">The Retreat</a></li>
-                <li><a href="index.html#activities">Activities</a></li>
-                <li><a href="index.html#booking" class="nav-cta">Inquire</a></li>
+                <li><a href="photos.html">Photos</a></li>
+                <li><a href="activities.html">Activities</a></li>
+                <li><a href="more.html">More</a></li>
+                <li><a href="book.html" class="nav-cta">Book Now</a></li>
             </ul>
         </div>
     </nav>
 
     <!-- Terms Content -->
-    <main class="terms-page">
+    <main class="terms-page" id="main">
         <div class="container">
             <h1 class="terms-title">Terms &amp; Conditions</h1>
             <p class="terms-updated">Last updated: July 2026</p>
@@ -241,7 +243,7 @@
 
                 <div class="terms-contact">
                     <h2>Questions?</h2>
-                    <p>If you have any questions about these terms and conditions, please <a href="index.html#booking">contact us</a> before booking.</p>
+                    <p>If you have any questions about these terms and conditions, please <a href="book.html">contact us</a> before booking.</p>
                     <p class="terms-entity">Mountain River Retreat<br>Noel &amp; Ben Retreats LLC<br>Ellamore, WV 26267</p>
                 </div>
             </div>
@@ -259,13 +261,18 @@
                 </div>
                 <div class="footer-links">
                     <a href="index.html">Home</a>
-                    <a href="index.html#retreat">The Retreat</a>
-                    <a href="index.html#activities">Activities</a>
-                    <a href="index.html#booking">Inquire</a>
+                    <a href="photos.html">Photos</a>
+                    <a href="activities.html">Activities</a>
+                    <a href="more.html">More</a>
+                    <a href="book.html">Book</a>
+                    <a href="terms.html">Terms</a>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 Mountain River Retreat — Noel &amp; Ben Retreats LLC. All rights reserved.</p>
+                <p class="footer-copyright">&copy; 2026 Mountain River Retreat &mdash; Noel &amp; Ben Retreats LLC. All rights reserved.</p>
+                <p class="footer-meta">Ellamore, West Virginia 26267 &middot; <a href="https://wvretreats.com">wvretreats.com</a></p>
+                <p class="footer-meta">Website published July 2026 &middot; <a href="terms.html">Terms &amp; Conditions</a> &middot; <a href="book.html">Contact</a></p>
+                <p class="footer-meta footer-fineprint">Content, photography, and branding are property of Noel &amp; Ben Retreats LLC and may not be reproduced without permission.</p>
             </div>
         </div>
     </footer>

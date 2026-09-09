@@ -11,17 +11,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;600;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
 </head>
 <body>
+    <a href="#main" class="skip-link">Skip to main content</a>
     <!-- Navigation -->
-    <nav class="navbar" id="navbar">
+    <nav class="navbar" id="navbar" aria-label="Main navigation">
         <div class="nav-container">
             <a href="index.html" class="nav-logo">Mountain River Retreat</a>
-            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
-                <span></span>
-                <span></span>
-                <span></span>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
             </button>
             <ul class="nav-menu" id="nav-menu">
-                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="index.html" class="active" aria-current="page">Home</a></li>
                 <li><a href="photos.html">Photos</a></li>
                 <li><a href="activities.html">Activities</a></li>
                 <li><a href="more.html">More</a></li>
@@ -30,9 +31,10 @@
         </div>
     </nav>
 
+    <main id="main">
     <!-- Hero Section -->
     <header class="hero" id="hero">
-        <div class="hero-overlay"></div>
+        <div class="hero-overlay" aria-hidden="true"></div>
         <div class="hero-content">
             <h1>Disconnect &amp; Unwind</h1>
             <p class="hero-tagline">Clean. Cozy. Adventurous.</p>
@@ -51,33 +53,33 @@
                     <p>This is a true escape. Cell reception is limited up here on the mountain, and that's the point. Leave the noise behind, breathe the mountain air, and reconnect with what matters.</p>
                     <div class="about-highlights">
                         <div class="highlight">
-                            <span class="highlight-icon">✨</span>
+                            <span class="highlight-icon" aria-hidden="true">✨</span>
                             <span>Modern Glamping</span>
                         </div>
                         <div class="highlight">
-                            <span class="highlight-icon">🌊</span>
+                            <span class="highlight-icon" aria-hidden="true">🌊</span>
                             <span>Middle Fork River</span>
                         </div>
                         <div class="highlight">
-                            <span class="highlight-icon">🏔️</span>
+                            <span class="highlight-icon" aria-hidden="true">🏔️</span>
                             <span>Mountain Setting</span>
                         </div>
                         <div class="highlight">
-                            <span class="highlight-icon">🎣</span>
+                            <span class="highlight-icon" aria-hidden="true">🎣</span>
                             <span>Trout Stocking Site</span>
                         </div>
                         <div class="highlight">
-                            <span class="highlight-icon">🐕</span>
+                            <span class="highlight-icon" aria-hidden="true">🐕</span>
                             <span>Dog Friendly</span>
                         </div>
                         <div class="highlight">
-                            <span class="highlight-icon">🔥</span>
+                            <span class="highlight-icon" aria-hidden="true">🔥</span>
                             <span>Fire Pit &amp; Grill</span>
                         </div>
                     </div>
                 </div>
                 <div class="about-image">
-                    <img src="images/living room view 1.jpg" alt="Cozy living area inside the retreat" class="about-photo">
+                    <img src="images/camper on pad.jpg" alt="The 5th wheel camper on its gravel pad surrounded by green lawn and trees" class="about-photo">
                 </div>
             </div>
         </div>
@@ -90,32 +92,32 @@
             <p class="section-subtitle">A spacious, fully-equipped glamping experience with all the comforts of home — nestled riverside in the Appalachian mountains.</p>
             <div class="features-grid">
                 <div class="feature-card">
-                    <div class="feature-icon">🛏️</div>
+                    <div class="feature-icon" aria-hidden="true">🛏️</div>
                     <h3>Sleeps 4</h3>
                     <p>Cal King bed in the private master suite plus a full-size pullout couch. Quality bedding and linens provided.</p>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon">🍳</div>
+                    <div class="feature-icon" aria-hidden="true">🍳</div>
                     <h3>Full Kitchen</h3>
                     <p>Equipped kitchen with appliances, flatware, cookware, and everything you need to prepare meals.</p>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon">🚿</div>
+                    <div class="feature-icon" aria-hidden="true">🚿</div>
                     <h3>Private Bathroom</h3>
                     <p>Full bathroom with hot shower. Fresh water for comfortable, extended stays.</p>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon">📐</div>
+                    <div class="feature-icon" aria-hidden="true">📐</div>
                     <h3>Spacious Layout</h3>
                     <p>Over 300 sq ft of living space with an open floor plan — room to spread out and relax.</p>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon">❄️</div>
+                    <div class="feature-icon" aria-hidden="true">❄️</div>
                     <h3>Climate Control</h3>
                     <p>Central air conditioning and heating for comfortable stays in any season.</p>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon">🔥</div>
+                    <div class="feature-icon" aria-hidden="true">🔥</div>
                     <h3>Fire Pit &amp; Grill</h3>
                     <p>Outdoor fire pit and grill on the property. Evenings are for stars and fire by the river.</p>
                 </div>
@@ -134,6 +136,7 @@
             <a href="book.html" class="btn btn-primary">Check Availability &amp; Book</a>
         </div>
     </section>
+    </main>
 
     <!-- Footer -->
     <footer class="footer">

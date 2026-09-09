@@ -11,25 +11,27 @@
     <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;600;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
 </head>
 <body>
+    <a href="#main" class="skip-link">Skip to main content</a>
     <!-- Navigation -->
-    <nav class="navbar scrolled" id="navbar">
+    <nav class="navbar scrolled" id="navbar" aria-label="Main navigation">
         <div class="nav-container">
             <a href="index.html" class="nav-logo">Mountain River Retreat</a>
-            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
-                <span></span>
-                <span></span>
-                <span></span>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
             </button>
             <ul class="nav-menu" id="nav-menu">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="photos.html">Photos</a></li>
-                <li><a href="activities.html" class="active">Activities</a></li>
+                <li><a href="activities.html" class="active" aria-current="page">Activities</a></li>
                 <li><a href="more.html">More</a></li>
                 <li><a href="book.html" class="nav-cta">Book Now</a></li>
             </ul>
         </div>
     </nav>
 
+    <main id="main">
     <!-- Page Header -->
     <header class="page-header">
         <div class="container">
@@ -43,47 +45,47 @@
         <div class="container">
             <div class="activities-grid">
                 <div class="activity-card">
-                    <div class="activity-icon">🎣</div>
+                    <div class="activity-icon" aria-hidden="true">🎣</div>
                     <h3>Fishing</h3>
                     <p>Trout stocking right out front on the Middle Fork River. The river is regularly stocked — bring your rod and your WV fishing license.</p>
                 </div>
                 <div class="activity-card">
-                    <div class="activity-icon">🦌</div>
+                    <div class="activity-icon" aria-hidden="true">🦌</div>
                     <h3>Hunting</h3>
                     <p>Excellent deer, turkey, and small game hunting in season. West Virginia is a hunter's paradise.</p>
                 </div>
                 <div class="activity-card">
-                    <div class="activity-icon">🏎️</div>
+                    <div class="activity-icon" aria-hidden="true">🏎️</div>
                     <h3>ATV &amp; Side-by-Side</h3>
                     <p>A rider's basecamp. The driveway fits two vehicles plus a trailer, with plenty of nearby trails and organized local rides most weekends. Bring your own rig and explore the mountain roads. Please note: no driving on the grass or in the woods on the property.</p>
                 </div>
                 <div class="activity-card">
-                    <div class="activity-icon">🏊</div>
+                    <div class="activity-icon" aria-hidden="true">🏊</div>
                     <h3>Swimming</h3>
                     <p>Natural swimming hole right on the property. Cool off in the river on summer days.</p>
                 </div>
                 <div class="activity-card">
-                    <div class="activity-icon">🌲</div>
+                    <div class="activity-icon" aria-hidden="true">🌲</div>
                     <h3>Audra State Park</h3>
                     <p>Nearby park with hiking trails, swimming holes, and beautiful rock formations along the Middle Fork River — the same river that runs through the property.</p>
                 </div>
                 <div class="activity-card">
-                    <div class="activity-icon">💧</div>
+                    <div class="activity-icon" aria-hidden="true">💧</div>
                     <h3>Blackwater Falls</h3>
                     <p>One of WV's most iconic state parks. Stunning waterfalls, canyon views, and miles of trails.</p>
                 </div>
                 <div class="activity-card">
-                    <div class="activity-icon">🏞️</div>
+                    <div class="activity-icon" aria-hidden="true">🏞️</div>
                     <h3>New River Gorge</h3>
                     <p>America's newest National Park. World-class rock climbing, whitewater rafting, and hiking.</p>
                 </div>
                 <div class="activity-card">
-                    <div class="activity-icon">🚶</div>
+                    <div class="activity-icon" aria-hidden="true">🚶</div>
                     <h3>Hiking</h3>
                     <p>Miles of trails through the Appalachian mountains — from easy riverside walks to challenging ridge climbs.</p>
                 </div>
                 <div class="activity-card">
-                    <div class="activity-icon">📵</div>
+                    <div class="activity-icon" aria-hidden="true">📵</div>
                     <h3>Disconnect</h3>
                     <p>Limited cell reception up on the mountain. Leave the noise behind and actually relax for once.</p>
                 </div>
@@ -98,7 +100,7 @@
             <p class="section-subtitle">A few of our favorite local spots to help you make the most of your stay.</p>
             <div class="recs-grid">
                 <div class="recs-category">
-                    <h3><span class="recs-icon">🍔</span> Food</h3>
+                    <h3><span class="recs-icon" aria-hidden="true">🍔</span> Food</h3>
                     <ul class="recs-list">
                         <li>
                             <a href="https://www.facebook.com/fb-answers/whistle-stop-bar-and-grill-buckhannon-wv/" target="_blank" rel="noopener">Whistle Stop</a>
@@ -115,7 +117,7 @@
                     </ul>
                 </div>
                 <div class="recs-category">
-                    <h3><span class="recs-icon">🏎️</span> Side-by-Side Rental</h3>
+                    <h3><span class="recs-icon" aria-hidden="true">🏎️</span> Side-by-Side Rental</h3>
                     <ul class="recs-list">
                         <li>
                             <a href="https://www.elkinsmotorsports.net/" target="_blank" rel="noopener">Elkins Motorsports</a>
@@ -124,7 +126,7 @@
                     </ul>
                 </div>
                 <div class="recs-category">
-                    <h3><span class="recs-icon">🛒</span> Groceries</h3>
+                    <h3><span class="recs-icon" aria-hidden="true">🛒</span> Groceries</h3>
                     <ul class="recs-list">
                         <li>
                             <a href="https://www.kroger.com/stores/search?searchText=Elkins%2C%20WV" target="_blank" rel="noopener">Kroger</a>
@@ -148,7 +150,7 @@
             <div class="location-content">
                 <div class="location-info">
                     <div class="location-badge">
-                        <span class="location-pin">📍</span>
+                        <span class="location-pin" aria-hidden="true">📍</span>
                         <h3>Ellamore, WV 26267</h3>
                     </div>
                     <p>Our property is located in the mountains near Ellamore, Randolph County, West Virginia. The exact address and directions will be provided after your booking is confirmed.</p>
@@ -175,7 +177,7 @@
                 </div>
                 <div class="location-map">
                     <div class="map-placeholder">
-                        <span>🗺️</span>
+                        <span aria-hidden="true">🗺️</span>
                         <p>Ellamore, WV 26267</p>
                         <p class="map-note">Exact location provided after booking</p>
                     </div>
@@ -186,6 +188,7 @@
             </div>
         </div>
     </section>
+    </main>
 
     <!-- Footer -->
     <footer class="footer">

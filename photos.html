@@ -11,18 +11,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;600;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
 </head>
 <body>
+    <a href="#main" class="skip-link">Skip to main content</a>
     <!-- Navigation -->
-    <nav class="navbar scrolled" id="navbar">
+    <nav class="navbar scrolled" id="navbar" aria-label="Main navigation">
         <div class="nav-container">
             <a href="index.html" class="nav-logo">Mountain River Retreat</a>
-            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
-                <span></span>
-                <span></span>
-                <span></span>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
             </button>
             <ul class="nav-menu" id="nav-menu">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="photos.html" class="active">Photos</a></li>
+                <li><a href="photos.html" class="active" aria-current="page">Photos</a></li>
                 <li><a href="activities.html">Activities</a></li>
                 <li><a href="more.html">More</a></li>
                 <li><a href="book.html" class="nav-cta">Book Now</a></li>
@@ -30,6 +31,7 @@
         </div>
     </nav>
 
+    <main id="main">
     <!-- Page Header -->
     <header class="page-header">
         <div class="container">
@@ -43,12 +45,20 @@
         <div class="container">
             <div class="gallery-grid">
                 <div class="gallery-item gallery-item-large">
+                    <img src="images/camper on pad.jpg" alt="The 5th wheel camper on its gravel pad surrounded by green lawn and trees" loading="lazy">
+                    <span class="gallery-caption">The Retreat</span>
+                </div>
+                <div class="gallery-item">
                     <img src="images/kitchen view.jpg" alt="Full kitchen with modern finishes and counter space" loading="lazy">
                     <span class="gallery-caption">Kitchen</span>
                 </div>
                 <div class="gallery-item">
-                    <img src="images/living room view 1.jpg" alt="Living room with cozy furnishings" loading="lazy">
+                    <img src="images/living room .jpg" alt="Living room with cozy furnishings" loading="lazy">
                     <span class="gallery-caption">Living Room</span>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/entertainment center and fireplace.jpg" alt="Entertainment center with television and electric fireplace" loading="lazy">
+                    <span class="gallery-caption">Living Room &amp; Fireplace</span>
                 </div>
                 <div class="gallery-item">
                     <img src="images/entry view .jpg" alt="Entry and adventure station" loading="lazy">
@@ -88,6 +98,7 @@
             </div>
         </div>
     </section>
+    </main>
 
     <!-- Footer -->
     <footer class="footer">

@@ -11,25 +11,27 @@
     <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;600;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
 </head>
 <body>
+    <a href="#main" class="skip-link">Skip to main content</a>
     <!-- Navigation -->
-    <nav class="navbar scrolled" id="navbar">
+    <nav class="navbar scrolled" id="navbar" aria-label="Main navigation">
         <div class="nav-container">
             <a href="index.html" class="nav-logo">Mountain River Retreat</a>
-            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
-                <span></span>
-                <span></span>
-                <span></span>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
             </button>
             <ul class="nav-menu" id="nav-menu">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="photos.html">Photos</a></li>
                 <li><a href="activities.html">Activities</a></li>
                 <li><a href="more.html">More</a></li>
-                <li><a href="book.html" class="nav-cta active">Book Now</a></li>
+                <li><a href="book.html" class="nav-cta active" aria-current="page">Book Now</a></li>
             </ul>
         </div>
     </nav>
 
+    <main id="main">
     <!-- Page Header -->
     <header class="page-header">
         <div class="container">
@@ -57,21 +59,21 @@
             </div>
             <div class="rates-details">
                 <div class="rates-detail-item">
-                    <span class="rates-detail-icon">🌙</span>
+                    <span class="rates-detail-icon" aria-hidden="true">🌙</span>
                     <div>
                         <strong>2-Night Minimum</strong>
                         <p>All bookings require a minimum stay of two nights.</p>
                     </div>
                 </div>
                 <div class="rates-detail-item">
-                    <span class="rates-detail-icon">🔒</span>
+                    <span class="rates-detail-icon" aria-hidden="true">🔒</span>
                     <div>
                         <strong>Refundable Security Deposit</strong>
                         <p>$250 for standard stays, or $500 when bringing a dog. Held via card authorization and released within 7 days of checkout, provided there's no damage or rule violations.</p>
                     </div>
                 </div>
                 <div class="rates-detail-item">
-                    <span class="rates-detail-icon">🐕</span>
+                    <span class="rates-detail-icon" aria-hidden="true">🐕</span>
                     <div>
                         <strong>Bringing a Dog?</strong>
                         <p>Dogs are welcome with prior approval. A $500 security deposit applies for stays with a dog. Let us know when you inquire.</p>
@@ -150,8 +152,8 @@
                     </div>
                     <button type="submit" class="btn btn-primary btn-submit">Send Inquiry</button>
                 </form>
-                <div id="form-success" class="form-success hidden">
-                    <div class="success-icon">✅</div>
+                <div id="form-success" class="form-success hidden" role="status" aria-live="polite">
+                    <div class="success-icon" aria-hidden="true">✅</div>
                     <h3>Inquiry Sent!</h3>
                     <p>Thanks for your interest! We'll get back to you within 24 hours with availability, rates, and the property details including exact address and directions.</p>
                 </div>
@@ -166,27 +168,27 @@
             <p class="section-subtitle">A few things to keep in mind so everyone has a great experience.</p>
             <div class="rules-grid">
                 <div class="rule-card">
-                    <div class="rule-icon">🚭</div>
+                    <div class="rule-icon" aria-hidden="true">🚭</div>
                     <h3>No Smoking</h3>
                     <p>No smoking inside the retreat. You're welcome to smoke outdoors.</p>
                 </div>
                 <div class="rule-card">
-                    <div class="rule-icon">🔇</div>
+                    <div class="rule-icon" aria-hidden="true">🔇</div>
                     <h3>Quiet Hours</h3>
                     <p>Follow local government quiet hours. Be respectful of the mountain and your neighbors.</p>
                 </div>
                 <div class="rule-card">
-                    <div class="rule-icon">🐕</div>
+                    <div class="rule-icon" aria-hidden="true">🐕</div>
                     <h3>Dogs Welcome</h3>
                     <p>Dogs are okay with prior approval. Let us know when you inquire.</p>
                 </div>
                 <div class="rule-card">
-                    <div class="rule-icon">🚫</div>
+                    <div class="rule-icon" aria-hidden="true">🚫</div>
                     <h3>No Parties</h3>
                     <p>This is a peaceful retreat, not a party spot. No events or large gatherings.</p>
                 </div>
                 <div class="rule-card">
-                    <div class="rule-icon">📱</div>
+                    <div class="rule-icon" aria-hidden="true">📱</div>
                     <h3>Limited Cell Service</h3>
                     <p>Cell reception is limited. Plan accordingly — download maps, let people know you'll be off-grid.</p>
                 </div>
@@ -204,53 +206,54 @@
             <p class="section-subtitle">No worries — glamping is easy and comfortable. Here's what to know so you feel right at home.</p>
             <div class="first-timer-grid">
                 <div class="ft-card">
-                    <div class="ft-icon">💧</div>
+                    <div class="ft-icon" aria-hidden="true">💧</div>
                     <h3>Water is Limited</h3>
                     <p>The camper runs on tank water. It's plenty for your stay, but be mindful — take shorter showers and don't leave taps running. If you notice water running low, let us know.</p>
                 </div>
                 <div class="ft-card">
-                    <div class="ft-icon">🚽</div>
+                    <div class="ft-icon" aria-hidden="true">🚽</div>
                     <h3>The Toilet</h3>
                     <p>Only flush toilet paper — nothing else (no wipes, paper towels, or hygiene products), as it drains to a holding tank. A small step or foot pedal operates the flush.</p>
                 </div>
                 <div class="ft-card">
-                    <div class="ft-icon">🔌</div>
+                    <div class="ft-icon" aria-hidden="true">🔌</div>
                     <h3>Power &amp; Outlets</h3>
                     <p>The camper is fully powered with standard outlets. Just avoid running too many high-draw appliances (space heaters, hair dryers) at the exact same time to prevent tripping a breaker.</p>
                 </div>
                 <div class="ft-card">
-                    <div class="ft-icon">🌡️</div>
+                    <div class="ft-icon" aria-hidden="true">🌡️</div>
                     <h3>Heating &amp; Cooling</h3>
                     <p>Central AC and propane heat keep things comfortable year-round. Campers heat and cool quickly given the smaller space — give it a few minutes to adjust.</p>
                 </div>
                 <div class="ft-card">
-                    <div class="ft-icon">🚪</div>
+                    <div class="ft-icon" aria-hidden="true">🚪</div>
                     <h3>Doors &amp; Steps</h3>
                     <p>The entry has a step or two — watch your footing, especially at night. The door latches firmly; give it a solid pull to seal it against the weather and bugs.</p>
                 </div>
                 <div class="ft-card">
-                    <div class="ft-icon">🧺</div>
+                    <div class="ft-icon" aria-hidden="true">🧺</div>
                     <h3>Cozy by Design</h3>
                     <p>A camper is a snug, efficient space — everything has its place. Storage is built into nooks and under seating. It's tidy living that keeps you close to the outdoors.</p>
                 </div>
                 <div class="ft-card">
-                    <div class="ft-icon">🐻</div>
+                    <div class="ft-icon" aria-hidden="true">🐻</div>
                     <h3>You're in the Mountains</h3>
                     <p>Keep food sealed and trash secured — we're in wildlife country. Don't leave food out overnight, inside or out. Enjoy the critters from a respectful distance.</p>
                 </div>
                 <div class="ft-card">
-                    <div class="ft-icon">📵</div>
+                    <div class="ft-icon" aria-hidden="true">📵</div>
                     <h3>Off the Grid</h3>
                     <p>Cell service is limited. Download maps, music, and anything you need before you arrive. Consider it permission to truly unplug and relax.</p>
                 </div>
                 <div class="ft-card">
-                    <div class="ft-icon">❓</div>
+                    <div class="ft-icon" aria-hidden="true">❓</div>
                     <h3>Questions? Just Ask</h3>
                     <p>We leave a welcome guide inside with everything you need to know. First camper stay should be fun, not confusing — reach out anytime and we'll help.</p>
                 </div>
             </div>
         </div>
     </section>
+    </main>
 
     <!-- Footer -->
     <footer class="footer">
