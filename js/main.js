@@ -1,33 +1,49 @@
 // ===== Navigation Scroll Effect =====
 const navbar = document.getElementById('navbar');
 
-window.addEventListener('scroll', () => {
-    if (window.scrollY > 50) {
-        navbar.classList.add('scrolled');
-    } else {
-        navbar.classList.remove('scrolled');
-    }
-});
+if (navbar && !navbar.classList.contains('scrolled')) {
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+    });
+}
 
 // ===== Mobile Navigation Toggle =====
 const navToggle = document.getElementById('nav-toggle');
 const navMenu = document.getElementById('nav-menu');
 
+function setMenuState(open) {
+    navMenu.classList.toggle('active', open);
+    navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    navToggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+}
+
 navToggle.addEventListener('click', () => {
-    navMenu.classList.toggle('active');
+    setMenuState(!navMenu.classList.contains('active'));
 });
 
 // Close mobile menu when a link is clicked
 document.querySelectorAll('.nav-menu a').forEach(link => {
     link.addEventListener('click', () => {
-        navMenu.classList.remove('active');
+        setMenuState(false);
     });
 });
 
 // Close mobile menu when clicking outside
 document.addEventListener('click', (e) => {
     if (!navMenu.contains(e.target) && !navToggle.contains(e.target)) {
-        navMenu.classList.remove('active');
+        setMenuState(false);
+    }
+});
+
+// Close mobile menu on Escape key
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && navMenu.classList.contains('active')) {
+        setMenuState(false);
+        navToggle.focus();
     }
 });
 
@@ -59,6 +75,8 @@ if (bookingForm) {
             if (response.ok) {
                 bookingForm.classList.add('hidden');
                 formSuccess.classList.remove('hidden');
+                formSuccess.setAttribute('tabindex', '-1');
+                formSuccess.focus();
             } else {
                 throw new Error('Form submission failed');
             }
@@ -67,6 +85,8 @@ if (bookingForm) {
             // Remove this fallback once you have a real Formspree endpoint
             bookingForm.classList.add('hidden');
             formSuccess.classList.remove('hidden');
+            formSuccess.setAttribute('tabindex', '-1');
+            formSuccess.focus();
         }
 
         submitBtn.textContent = originalText;
@@ -101,12 +121,16 @@ if (suggestionForm) {
             if (response.ok) {
                 suggestionForm.classList.add('hidden');
                 suggestionSuccess.classList.remove('hidden');
+                suggestionSuccess.setAttribute('tabindex', '-1');
+                suggestionSuccess.focus();
             } else {
                 throw new Error('Form submission failed');
             }
         } catch (error) {
             suggestionForm.classList.add('hidden');
             suggestionSuccess.classList.remove('hidden');
+            suggestionSuccess.setAttribute('tabindex', '-1');
+            suggestionSuccess.focus();
         }
 
         submitBtn.textContent = originalText;
@@ -152,25 +176,28 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// ===== Simple scroll animation =====
-const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-};
+// ===== Simple scroll animation (skipped if user prefers reduced motion) =====
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0)';
-        }
+if (!prefersReducedMotion && 'IntersectionObserver' in window) {
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+            }
+        });
+    }, observerOptions);
+
+    document.querySelectorAll('.feature-card, .activity-card').forEach(card => {
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(20px)';
+        card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        observer.observe(card);
     });
-}, observerOptions);
-
-// Animate cards on scroll
-document.querySelectorAll('.feature-card, .activity-card').forEach(card => {
-    card.style.opacity = '0';
-    card.style.transform = 'translateY(20px)';
-    card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-    observer.observe(card);
-});
+}
