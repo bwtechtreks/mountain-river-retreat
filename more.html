@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What's Coming &amp; Suggestions | Mountain River Retreat</title>
+    <meta name="description" content="See what upgrades are coming to Mountain River Retreat and share your suggestions.">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;600;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar scrolled" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">Mountain River Retreat</a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="photos.html">Photos</a></li>
+                <li><a href="activities.html">Activities</a></li>
+                <li><a href="more.html" class="active">More</a></li>
+                <li><a href="book.html" class="nav-cta">Book Now</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <div class="container">
+            <h1>What's Coming</h1>
+            <p>We're always improving the property. Here's what's in the works.</p>
+        </div>
+    </header>
+
+    <!-- Roadmap / Timeline Section -->
+    <section class="section roadmap" id="roadmap">
+        <div class="container">
+            <p class="section-subtitle">A look at how the retreat is growing — from what's already done to what's on the horizon.</p>
+            <div class="timeline">
+
+                <div class="timeline-item timeline-done">
+                    <div class="timeline-marker">✓</div>
+                    <div class="timeline-content">
+                        <div class="timeline-phase">Completed</div>
+                        <ul class="timeline-list">
+                            <li>Camper gravel pad</li>
+                            <li>Clearing for better river views</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker">🍂</div>
+                    <div class="timeline-content">
+                        <div class="timeline-phase">Fall 2026</div>
+                        <ul class="timeline-list">
+                            <li>Gravel parking upgrade</li>
+                            <li>Carport over the camper</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker">🌿</div>
+                    <div class="timeline-content">
+                        <div class="timeline-phase">Spring / Summer 2027</div>
+                        <ul class="timeline-list">
+                            <li>River deck and stairs</li>
+                            <li>Deck on the front of the camper</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker">✨</div>
+                    <div class="timeline-content">
+                        <div class="timeline-phase">2027 &amp; Beyond</div>
+                        <ul class="timeline-list">
+                            <li>Hot tub</li>
+                            <li>Outdoor shower (seasonal)</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Suggestion Box Section -->
+    <section class="section suggestion-box" id="suggestions">
+        <div class="container">
+            <h2 class="section-title">Suggestion Box</h2>
+            <p class="section-subtitle">Have an idea to make the retreat even better? We're all ears.</p>
+            <div class="booking-form-container">
+                <form id="suggestion-form" class="booking-form" action="https://formspree.io/f/xnjerdgk" method="POST">
+                    <input type="hidden" name="_subject" value="Suggestion Box">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="suggest-name">Name (optional)</label>
+                            <input type="text" id="suggest-name" name="name" placeholder="Your name">
+                        </div>
+                        <div class="form-group">
+                            <label for="suggest-email">Email (optional)</label>
+                            <input type="email" id="suggest-email" name="email" placeholder="your@email.com">
+                        </div>
+                    </div>
+                    <div class="form-group full-width">
+                        <label for="suggestion">Your Suggestion *</label>
+                        <textarea id="suggestion" name="suggestion" rows="4" required placeholder="What would make your stay better? An amenity, activity, upgrade, or anything else..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-submit">Send Suggestion</button>
+                </form>
+                <div id="suggestion-success" class="form-success hidden">
+                    <div class="success-icon">💡</div>
+                    <h3>Thanks for the idea!</h3>
+                    <p>We read every suggestion and seriously consider all of them. You're helping us make this place better.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>Mountain River Retreat</h3>
+                    <p>A dog-friendly waterfront glamping escape in the West Virginia mountains.</p>
+                    <p class="footer-llc">A property of Noel &amp; Ben Retreats LLC</p>
+                </div>
+                <div class="footer-links">
+                    <a href="index.html">Home</a>
+                    <a href="photos.html">Photos</a>
+                    <a href="activities.html">Activities</a>
+                    <a href="more.html">More</a>
+                    <a href="book.html">Book</a>
+                    <a href="terms.html">Terms</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-copyright">&copy; 2026 Mountain River Retreat &mdash; Noel &amp; Ben Retreats LLC. All rights reserved.</p>
+                <p class="footer-meta">Ellamore, West Virginia 26267 &middot; <a href="https://wvretreats.com">wvretreats.com</a></p>
+                <p class="footer-meta">Website published July 2026 &middot; <a href="terms.html">Terms &amp; Conditions</a> &middot; <a href="book.html">Contact</a></p>
+                <p class="footer-meta footer-fineprint">Content, photography, and branding are property of Noel &amp; Ben Retreats LLC and may not be reproduced without permission.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

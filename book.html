@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book &amp; Availability | Mountain River Retreat</title>
+    <meta name="description" content="Check availability and send a booking inquiry for our dog-friendly glamping retreat in Ellamore, WV.">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;600;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar scrolled" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">Mountain River Retreat</a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="photos.html">Photos</a></li>
+                <li><a href="activities.html">Activities</a></li>
+                <li><a href="more.html">More</a></li>
+                <li><a href="book.html" class="nav-cta active">Book Now</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <div class="container">
+            <h1>Book Your Stay</h1>
+            <p>Check the calendar for open dates, then send us an inquiry. We'll get back to you within 24 hours with availability and rates.</p>
+        </div>
+    </header>
+
+    <!-- Rates Section -->
+    <section class="section rates" id="rates">
+        <div class="container">
+            <h2 class="section-title">Rates</h2>
+            <p class="section-subtitle">Simple, straightforward pricing. Two-night minimum stay.</p>
+            <div class="rates-grid">
+                <div class="rate-card">
+                    <div class="rate-label">Sunday &ndash; Thursday</div>
+                    <div class="rate-price">$125<span>/night</span></div>
+                    <div class="rate-note">Weeknights</div>
+                </div>
+                <div class="rate-card rate-card-featured">
+                    <div class="rate-label">Friday &amp; Saturday</div>
+                    <div class="rate-price">$150<span>/night</span></div>
+                    <div class="rate-note">Weekends</div>
+                </div>
+            </div>
+            <div class="rates-details">
+                <div class="rates-detail-item">
+                    <span class="rates-detail-icon">🌙</span>
+                    <div>
+                        <strong>2-Night Minimum</strong>
+                        <p>All bookings require a minimum stay of two nights.</p>
+                    </div>
+                </div>
+                <div class="rates-detail-item">
+                    <span class="rates-detail-icon">🔒</span>
+                    <div>
+                        <strong>Refundable Security Deposit</strong>
+                        <p>$250 for standard stays, or $500 when bringing a dog. Held via card authorization and released within 7 days of checkout, provided there's no damage or rule violations.</p>
+                    </div>
+                </div>
+                <div class="rates-detail-item">
+                    <span class="rates-detail-icon">🐕</span>
+                    <div>
+                        <strong>Bringing a Dog?</strong>
+                        <p>Dogs are welcome with prior approval. A $500 security deposit applies for stays with a dog. Let us know when you inquire.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Availability Calendar -->
+    <section class="section availability" id="availability">
+        <div class="container">
+            <h2 class="section-title">Availability</h2>
+            <p class="section-subtitle">Dates with events marked are booked or unavailable. Open dates are available.</p>
+            <div class="calendar-container">
+                <div class="calendar-embed">
+                    <iframe src="https://calendar.google.com/calendar/embed?src=fba108cef069fe15a316ea5b8a26e37704be94cbc7fcc3ceece7bf50c7988bf9%40group.calendar.google.com&ctz=America%2FNew_York&mode=MONTH&showTitle=0&showNav=1&showDate=1&showPrint=0&showTabs=0&showCalendars=0&showTz=0&color=%232E4A3B" style="border: 0" width="100%" height="500" frameborder="0" scrolling="no" title="Availability Calendar"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section class="section booking" id="booking">
+        <div class="container">
+            <h2 class="section-title">Send an Inquiry</h2>
+            <p class="section-subtitle">Fill out the form below and we'll get back to you with availability and rates.</p>
+            <div class="booking-form-container">
+                <form id="booking-form" class="booking-form" action="https://formspree.io/f/xnjerdgk" method="POST">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" required placeholder="Your name">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" required placeholder="your@email.com">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="phone">Phone</label>
+                            <input type="tel" id="phone" name="phone" placeholder="(555) 123-4567">
+                        </div>
+                        <div class="form-group">
+                            <label for="guests">Number of Guests</label>
+                            <input type="number" id="guests" name="guests" min="1" max="4" placeholder="2">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="checkin">Desired Check-in *</label>
+                            <input type="date" id="checkin" name="checkin" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="checkout">Desired Check-out *</label>
+                            <input type="date" id="checkout" name="checkout" required>
+                        </div>
+                    </div>
+                    <div class="form-group full-width">
+                        <label for="dogs">Bringing a dog?</label>
+                        <select id="dogs" name="dogs">
+                            <option value="no">No</option>
+                            <option value="yes">Yes — please describe breed/size in message below</option>
+                        </select>
+                    </div>
+                    <div class="form-group full-width">
+                        <label for="message">Message / Questions</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Anything we should know? Questions about the property? If bringing a dog, please describe breed and size."></textarea>
+                    </div>
+                    <div class="form-group full-width form-agreement">
+                        <label class="agreement-label">
+                            <input type="checkbox" id="agreement" name="agreement" value="Agreed" required>
+                            <span>I have reviewed and agree to the <a href="terms.html" target="_blank" rel="noopener">Terms &amp; Conditions</a> and House Rules, and I take full responsibility for my entire party during the stay — every guest and every animal. *</span>
+                        </label>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-submit">Send Inquiry</button>
+                </form>
+                <div id="form-success" class="form-success hidden">
+                    <div class="success-icon">✅</div>
+                    <h3>Inquiry Sent!</h3>
+                    <p>Thanks for your interest! We'll get back to you within 24 hours with availability, rates, and the property details including exact address and directions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rules Section -->
+    <section class="section rules" id="rules">
+        <div class="container">
+            <h2 class="section-title">Know Before You Go</h2>
+            <p class="section-subtitle">A few things to keep in mind so everyone has a great experience.</p>
+            <div class="rules-grid">
+                <div class="rule-card">
+                    <div class="rule-icon">🚭</div>
+                    <h3>No Smoking</h3>
+                    <p>No smoking inside the retreat. You're welcome to smoke outdoors.</p>
+                </div>
+                <div class="rule-card">
+                    <div class="rule-icon">🔇</div>
+                    <h3>Quiet Hours</h3>
+                    <p>Follow local government quiet hours. Be respectful of the mountain and your neighbors.</p>
+                </div>
+                <div class="rule-card">
+                    <div class="rule-icon">🐕</div>
+                    <h3>Dogs Welcome</h3>
+                    <p>Dogs are okay with prior approval. Let us know when you inquire.</p>
+                </div>
+                <div class="rule-card">
+                    <div class="rule-icon">🚫</div>
+                    <h3>No Parties</h3>
+                    <p>This is a peaceful retreat, not a party spot. No events or large gatherings.</p>
+                </div>
+                <div class="rule-card">
+                    <div class="rule-icon">📱</div>
+                    <h3>Limited Cell Service</h3>
+                    <p>Cell reception is limited. Plan accordingly — download maps, let people know you'll be off-grid.</p>
+                </div>
+            </div>
+            <div class="section-cta">
+                <a href="terms.html" class="btn btn-secondary">Read Full Terms &amp; Conditions</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- First Time in a Camper Section -->
+    <section class="section first-timer" id="first-timer">
+        <div class="container">
+            <h2 class="section-title">First Time Staying in a Camper?</h2>
+            <p class="section-subtitle">No worries — glamping is easy and comfortable. Here's what to know so you feel right at home.</p>
+            <div class="first-timer-grid">
+                <div class="ft-card">
+                    <div class="ft-icon">💧</div>
+                    <h3>Water is Limited</h3>
+                    <p>The camper runs on tank water. It's plenty for your stay, but be mindful — take shorter showers and don't leave taps running. If you notice water running low, let us know.</p>
+                </div>
+                <div class="ft-card">
+                    <div class="ft-icon">🚽</div>
+                    <h3>The Toilet</h3>
+                    <p>Only flush toilet paper — nothing else (no wipes, paper towels, or hygiene products), as it drains to a holding tank. A small step or foot pedal operates the flush.</p>
+                </div>
+                <div class="ft-card">
+                    <div class="ft-icon">🔌</div>
+                    <h3>Power &amp; Outlets</h3>
+                    <p>The camper is fully powered with standard outlets. Just avoid running too many high-draw appliances (space heaters, hair dryers) at the exact same time to prevent tripping a breaker.</p>
+                </div>
+                <div class="ft-card">
+                    <div class="ft-icon">🌡️</div>
+                    <h3>Heating &amp; Cooling</h3>
+                    <p>Central AC and propane heat keep things comfortable year-round. Campers heat and cool quickly given the smaller space — give it a few minutes to adjust.</p>
+                </div>
+                <div class="ft-card">
+                    <div class="ft-icon">🚪</div>
+                    <h3>Doors &amp; Steps</h3>
+                    <p>The entry has a step or two — watch your footing, especially at night. The door latches firmly; give it a solid pull to seal it against the weather and bugs.</p>
+                </div>
+                <div class="ft-card">
+                    <div class="ft-icon">🧺</div>
+                    <h3>Cozy by Design</h3>
+                    <p>A camper is a snug, efficient space — everything has its place. Storage is built into nooks and under seating. It's tidy living that keeps you close to the outdoors.</p>
+                </div>
+                <div class="ft-card">
+                    <div class="ft-icon">🐻</div>
+                    <h3>You're in the Mountains</h3>
+                    <p>Keep food sealed and trash secured — we're in wildlife country. Don't leave food out overnight, inside or out. Enjoy the critters from a respectful distance.</p>
+                </div>
+                <div class="ft-card">
+                    <div class="ft-icon">📵</div>
+                    <h3>Off the Grid</h3>
+                    <p>Cell service is limited. Download maps, music, and anything you need before you arrive. Consider it permission to truly unplug and relax.</p>
+                </div>
+                <div class="ft-card">
+                    <div class="ft-icon">❓</div>
+                    <h3>Questions? Just Ask</h3>
+                    <p>We leave a welcome guide inside with everything you need to know. First camper stay should be fun, not confusing — reach out anytime and we'll help.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>Mountain River Retreat</h3>
+                    <p>A dog-friendly waterfront glamping escape in the West Virginia mountains.</p>
+                    <p class="footer-llc">A property of Noel &amp; Ben Retreats LLC</p>
+                </div>
+                <div class="footer-links">
+                    <a href="index.html">Home</a>
+                    <a href="photos.html">Photos</a>
+                    <a href="activities.html">Activities</a>
+                    <a href="more.html">More</a>
+                    <a href="book.html">Book</a>
+                    <a href="terms.html">Terms</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-copyright">&copy; 2026 Mountain River Retreat &mdash; Noel &amp; Ben Retreats LLC. All rights reserved.</p>
+                <p class="footer-meta">Ellamore, West Virginia 26267 &middot; <a href="https://wvretreats.com">wvretreats.com</a></p>
+                <p class="footer-meta">Website published July 2026 &middot; <a href="terms.html">Terms &amp; Conditions</a> &middot; <a href="book.html">Contact</a></p>
+                <p class="footer-meta footer-fineprint">Content, photography, and branding are property of Noel &amp; Ben Retreats LLC and may not be reproduced without permission.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
